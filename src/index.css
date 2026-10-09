@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Syne', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+    --apple-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0D0E12;
+    color: #F8FAFC;
+    letter-spacing: -0.011em;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Human-Crafted Editorial Typography */
+.apple-headline-gradient {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 65%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.apple-subheadline-gradient {
+  background: linear-gradient(180deg, #94a3b8 0%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Precision Engineered Surfaces */
+.apple-glass {
+  background: rgba(18, 20, 26, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.apple-glass-card,
+.apple-lens-card {
+  background: rgba(20, 22, 29, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 
+    0 16px 32px -12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backface-visibility: hidden;
+}
+
+.apple-glass-card:hover {
+  background: rgba(25, 28, 38, 0.88);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 24px 44px -14px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Tactile Pill Button */
+.apple-pill-btn {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.apple-pill-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.apple-pill-btn:active {
+  transform: scale(0.97);
+}
+
+/* Warm Ambient Human Light */
+.apple-ambient-glow {
+  background: radial-gradient(circle 900px at 50% 0%, rgba(217, 119, 6, 0.03), transparent 70%),
+              radial-gradient(circle 800px at 85% 45%, rgba(148, 163, 184, 0.02), transparent 70%),
+              radial-gradient(circle 700px at 15% 85%, rgba(245, 158, 11, 0.02), transparent 70%);
+}
+
+/* Apple Entrance Animation - Smooth & Crisp */
+@keyframes appleFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-apple-fade-in-up {
+  animation: appleFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-250 { animation-delay: 200ms; }
+.animation-delay-400 { animation-delay: 300ms; }
+.animation-delay-550 { animation-delay: 400ms; }
+.animation-delay-700 { animation-delay: 500ms; }
+.animation-delay-850 { animation-delay: 600ms; }
+
+/* Custom Magnetic Cursor - Pure Hardware Accelerated Transforms with Clickable Morphing */
+.magnetic-cursor-ring {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  will-change: transform, width, height, border-radius;
+  transform: translate3d(-100px, -100px, 0);
+  transition: opacity 0.15s ease, border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.magnetic-cursor-ring.is-hovering {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.magnetic-cursor-ring.is-magnifying {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transform-origin: center center;
+}
+
+.magnetic-cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  z-index: 10000;
+  will-change: transform;
+  transform: translate3d(-100px, -100px, 0);
+  transition: opacity 0.15s ease;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0B0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #202026;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #33333d;
+}
+
+/* Apple Intersection Observer Reveal System - High-End Keynote Motion Design */
+.apple-reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  filter: blur(6px);
+  transition-property: opacity, transform, filter;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
+}
+
+.apple-reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apple-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
