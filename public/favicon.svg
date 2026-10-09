@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181A22"/>
+      <stop offset="100%" stop-color="#0B0C10"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="45%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- High-contrast dark rounded squircle tile for visibility in dark & light browser tabs -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="#F59E0B" stroke-width="2.5" stroke-opacity="0.9"/>
+
+  <!-- Bold Geometric 'G' Monogram - optimized for ultra-crisp 16px/32px tab rendering -->
+  <path d="M 46 22 
+           C 42 16, 36 14, 30 14 
+           C 19 14, 14 22, 14 32 
+           C 14 42, 20 50, 32 50 
+           C 42 50, 48 44, 48 35 
+           L 48 33 
+           L 32 33" 
+        fill="none" 
+        stroke="url(#goldGrad)" 
+        stroke-width="7" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Precision live core node -->
+  <circle cx="46" cy="22" r="2.5" fill="#FFFFFF"/>
+</svg>
